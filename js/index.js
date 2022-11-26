@@ -88,28 +88,24 @@ document.addEventListener("DOMContentLoaded", (e) => {
     document.getElementsByClassName("user-skill__bar-inner")
   );
 
-  // Init animations for skills
-  const observer = new IntersectionObserver((entries) => {
-    const elem = entries[0].target;
-    const indexOfElem = Number(elem.dataset.index);
+  const skillsTitleElem =
+    document.getElementsByClassName("user-skills__title")[0];
 
-    if (elem.style.width === "0%") {
-      elem.style.width = sortedSkills[indexOfElem].points * 10 + "%";
+  window.addEventListener("scroll", (e) => {
+    const scrollPosition = window.scrollY + window.innerHeight;
+
+    if (scrollPosition >= skillsTitleElem.offsetTop) {
+      if (skillElems[0].style.width !== "0%") {
+        return;
+      }
+
+      for (const skillElem of skillElems) {
+        const indexOfElem = Number(skillElem.dataset.index);
+
+        skillElem.style.width = sortedSkills[indexOfElem].points * 10 + "%";
+      }
     }
   });
-
-  for (const skillElem of skillElems) {
-    if (
-      window.scrollY + window.innerHeight >
-      skillElem.getBoundingClientRect().top + window.scrollY
-    ) {
-      const indexOfElem = Number(skillElem.dataset.index);
-
-      skillElem.style.width = sortedSkills[indexOfElem].points * 10 + "%";
-    }
-
-    observer.observe(skillElem);
-  }
 
   // Handle resize for format projects
   window.addEventListener("resize", (e) => {
