@@ -1,4 +1,5 @@
-server.js
+/server/
+./index.js
 
 # Swap
 [._]*.s[a-v][a-z]
