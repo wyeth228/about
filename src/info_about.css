@@ -1,5 +1,7 @@
 .info-about {
 	margin-top: 200px;
+
+	position: relative;
 }
 
 .info-about__paragraph {
