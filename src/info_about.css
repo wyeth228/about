@@ -1,0 +1,44 @@
+.info-about {
+	margin-top: 200px;
+}
+
+.info-about__paragraph {
+	position: relative;
+	z-index: 1000;
+}
+
+.info-about__paragraph:first-child {
+	font-size: 34px;
+	
+	max-width: 340px;
+	
+	border: 2px solid white;
+	
+	padding-right: 12px;
+	padding-top: 6px;
+}
+
+.info-about__paragraph:nth-child(2) {
+	margin-top: 14px;
+
+	opacity: 0.5;
+		
+	letter-spacing: 0.1rem;
+
+	max-width: 500px;
+}
+
+.info-about__background {
+	position: absolute;
+	top: 25%;
+	left: 40%;
+	z-index: 1;
+
+	max-width: 620px;
+}
+
+@media screen and (max-width: 768px) {
+	.info-about__paragraph:nth-child(2) {
+		background-color: black;
+	}
+}

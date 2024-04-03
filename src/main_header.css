@@ -1,0 +1,49 @@
+.main-header {
+	padding: 24px;
+	padding-bottom: 0;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-header__left-side {
+	display: flex;
+	align-items: flex-end;
+}
+
+.main-header__right-side {
+	display: flex;
+	align-items: center;
+}
+
+.main-header__nickname {
+	font-family: "Fugaz One";
+	font-size: 34px;
+	text-shadow: 0 0 10px white;
+}
+
+.main-header__nickname-number {
+	font-family: "Fugaz One";
+	font-size: 30px;
+	
+	opacity: 0.2;
+	
+	margin-left: 4px;
+}
+
+.main-header__href {
+	color: white;
+	font-size: 18px;
+	letter-spacing: 0.1em;
+	
+	padding: 0 4px 0 4px;
+
+	border: 1px solid white;
+						
+	text-decoration: none;
+}
+
+.main-header__href:hover {
+	text-decoration: underline;
+}
+

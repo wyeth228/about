@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+body {
+	color: white;
+	background-color: black;
+		
+	font-family: "Roboto", Arial, sans-serif;
+
+	overflow-x: hidden;
+}
+
+svg, path, g {
+	pointer-events: none;
+}
+
+.main-wrapper {
+	max-width: 1120px;
+
+	margin: 0 auto;
+
+	overflow: hidden;
+}
+
+.section {
+	margin-top: 170px;
+}
+
+.section__title {
+	font-size: 30px;
+	
+	padding-left: 24px;
+}
+
+.section__title_center {
+	padding-left: 0;
+		
+	text-align: center;
+}
