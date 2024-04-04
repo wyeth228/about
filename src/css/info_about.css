@@ -5,11 +5,13 @@
 }
 
 .info-about__paragraph {
-	position: relative;
-	z-index: 1000;
+	
 }
 
-.info-about__paragraph:first-child {
+.info-about__main-text {
+	position: relative;
+	z-index: 1000;
+		
 	font-size: 34px;
 	
 	max-width: 340px;
@@ -20,7 +22,10 @@
 	padding-top: 6px;
 }
 
-.info-about__paragraph:nth-child(2) {
+.info-about__paragraph {
+	position: relative;
+	z-index: 1000;
+	
 	margin-top: 14px;
 
 	opacity: 0.5;
@@ -40,7 +45,7 @@
 }
 
 @media screen and (max-width: 768px) {
-	.info-about__paragraph:nth-child(2) {
+	.info-about__paragraph {
 		background-color: black;
 	}
 }

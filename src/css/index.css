@@ -14,20 +14,20 @@ body {
 	background-color: black;
 		
 	font-family: "Roboto", Arial, sans-serif;
-
-	overflow-x: hidden;
 }
 
 svg, path, g {
 	pointer-events: none;
 }
 
+.mobile-overflow-fix {
+	overflow-x: hidden;
+}
+
 .main-wrapper {
 	max-width: 1120px;
 
 	margin: 0 auto;
-
-	overflow: hidden;
 }
 
 .section {

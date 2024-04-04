@@ -1,43 +1,10 @@
-"use strict";
+import { LANGUAGES } from "./enums/languages.js";
+import { projects } from "./data/projects.js";
+import { textTranslations } from "./data/text_translations.js";
 
-var projects = [
-	{
-		title: "Weather Knower",
-		information: "Simple weather web application realized using React and some weather api service",
-		imageSourcePath: "./src/assets/images/projects/weather_knower.png",
-		link: "https://wyeth228.github.io/weather-knower/"
-	},
-	{
-		title: "Broken",
-		information: "An art",
-		imageSourcePath: "./src/assets/images/projects/broken.png",
-		link: ""
-	},
-	{
-		title: "G4560",
-		information: "Pixel art animation of cpu working",
-		imageSourcePath: "./src/assets/images/projects/g4560.gif",
-		link: ""
-	},
-	{
-		title: "Gym room",
-		information: "Simple gym room with some trainers",
-		imageSourcePath: "./src/assets/images/projects/gym.png",
-		link: ""
-	},
-	{
-		title: "Ping pong room",
-		information: "Room for ping pong game",
-		imageSourcePath: "./src/assets/images/projects/ping_pong.png",
-		link: ""
-	},
-	{
-		title: "World 3",
-		information: "An art",
-		imageSourcePath: "./src/assets/images/projects/world_3.png",
-		link: ""
-	},
-];
+var app = {
+	language: LANGUAGES.EN,
+};
 
 function initInfiniteSlider() {
 	var allSlideElements = document.getElementsByClassName("skill");
@@ -83,7 +50,7 @@ function initProjectPopup() {
 		},
 		activatePopup: function(projectIdx) {
 			title.innerHTML = projects[projectIdx].title;
-			information.innerHTML = projects[projectIdx].information;
+			information.innerHTML = projects[projectIdx].information[app.language];
 			image.src = projects[projectIdx].imageSourcePath;
 		
 			if (!projects[projectIdx].link) {
@@ -126,13 +93,51 @@ function initProjects(projectPopup) {
 	}
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+function initYear() {
 	var date = new Date();
-	document.getElementById("year").innerHTML = date.getFullYear();
+	document.getElementById("year").innerHTML = date.getFullYear();	
+}
+
+function initTranslations() {
+	for(var elementClassName of Object.keys(textTranslations)) {
+		var element = document.getElementsByClassName(elementClassName)[0];
 		
+		if (!element) {
+			continue;
+		}
+	
+		element.innerHTML = textTranslations[elementClassName][app.language];
+	}
+}
+
+function initLanguage() {
+	if (!navigator.language) {	
+		app.language = LANGUGES.EN;
+	
+		return;
+	}
+	
+	var navigatorLanguage = navigator.language.split("-")[0];
+	
+	if (navigatorLanguage === LANGUAGES.EN || navigatorLanguage === LANGUAGES.RU) {
+		app.language = navigatorLanguage;
+	} else {
+		app.language = LANGUAGES.EN;
+	}
+}
+
+function initApplication() {
+	initLanguage();
+	
+	initYear();
+	
 	initInfiniteSlider();
 	
 	var projectPopup = initProjectPopup();
 	
 	initProjects(projectPopup);
-});
+
+	initTranslations();
+}
+
+document.addEventListener("DOMContentLoaded", initApplication);

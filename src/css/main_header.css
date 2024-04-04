@@ -31,7 +31,7 @@
 	margin-left: 4px;
 }
 
-.main-header__href {
+.main-header__a {
 	color: white;
 	font-size: 18px;
 	letter-spacing: 0.1em;
@@ -47,3 +47,12 @@
 	text-decoration: underline;
 }
 
+@media screen and (max-width: 576px) {
+	.main-header {
+		padding: 10px;
+	}
+
+	.main-header__a {
+		font-size: 16px;
+	}
+}
