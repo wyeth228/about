@@ -1,5 +1,5 @@
 export var textTranslations = {
-	"main-header__href": {
+	"main-header__a": {
 		en: "contact me",
 		ru: "связаться"
 	},
