@@ -5,7 +5,7 @@ export var textTranslations = {
 	},
 	"info-about__main-text": {
 		en: "Hello everyone and welcome!",
-		ru: "Вас приветствует автор данной страницы"
+		ru: "Hello everyone and welcome!"
 	},
 	"info-about__paragraph": {
 		en: "А few words about the author: full stack developer, digital & pixel artist, 3D interior designer",
