@@ -9,12 +9,12 @@ export var projects = [
 		link: "https://wyeth228.github.io/weather-knower/"
 	},
 	{
-		title: "Broken",
+		title: "Lonely",
 		information: {
 			en: "Pixel art",
 			ru: "Пиксель арт"
 		},
-		imageSourcePath: "./src/assets/images/projects/broken.png",
+		imageSourcePath: "./src/assets/images/projects/lonely.png",
 		link: ""
 	},
 	{
@@ -45,12 +45,12 @@ export var projects = [
 		link: ""
 	},
 	{
-		title: "World 3",
+		title: "Poison",
 		information: {
 			en: "Pixel art",
 			ru: "Пиксель арт"
 		},
-		imageSourcePath: "./src/assets/images/projects/world_3.png",
+		imageSourcePath: "./src/assets/images/projects/poison.png",
 		link: ""
 	},
 ];
