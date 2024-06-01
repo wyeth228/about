@@ -1,58 +1,57 @@
 .main-header {
-	padding: 24px;
-	padding-bottom: 0;
+  padding: 24px;
+}
 
-	display: flex;
-	justify-content: space-between;
+.main-header__inner {
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-header__left-side {
-	display: flex;
-	align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .main-header__right-side {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .main-header__nickname {
-	font-family: "Fugaz One";
-	font-size: 34px;
-	text-shadow: 0 0 10px white;
+  font-family: "Fugaz One";
+  font-size: 34px;
+  text-shadow: 0 0 10px var(--color-1);
 }
 
 .main-header__nickname-number {
-	font-family: "Fugaz One";
-	font-size: 30px;
-	
-	opacity: 0.2;
-	
-	margin-left: 4px;
+  font-family: "Fugaz One";
+  font-size: 30px;
+
+  opacity: 0.2;
+
+  margin-left: 4px;
 }
 
 .main-header__a {
-	color: white;
-	font-size: 18px;
-	letter-spacing: 0.1em;
-	
-	padding: 0 4px 0 4px;
+  color: var(--color-1);
+  font-size: 18px;
+  letter-spacing: 0.1em;
 
-	border: 1px solid white;
-						
-	text-decoration: none;
+  padding: 0 4px 0 4px;
+
+  text-decoration: none;
 }
 
-.main-header__href:hover {
-	text-decoration: underline;
+.main-header__a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 576px) {
-	.main-header {
-		padding: 10px;
-	}
+  .main-header {
+    padding: 10px;
+  }
 
-	.main-header__a {
-		font-size: 16px;
-	}
+  .main-header__a {
+    font-size: 16px;
+  }
 }

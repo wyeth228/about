@@ -1,56 +1,121 @@
-export var projects = [
-	{
-		title: "Weather Knower",
-		information: {
-			en: "Simple weather web application realized using React and some weather api service",
-			ru: "Web приложение для просмотра погоды"
-		},
-		imageSourcePath: "./src/assets/images/projects/weather_knower.png",
-		link: "https://wyeth228.github.io/weather-knower/"
-	},
-	{
-		title: "Lonely",
-		information: {
-			en: "Pixel art",
-			ru: "Пиксель арт"
-		},
-		imageSourcePath: "./src/assets/images/projects/lonely.png",
-		link: ""
-	},
-	{
-		title: "G4560",
-		information: {
-			en: "Pixel art animation",
-			ru: "Пиксель арт анимэйшн"
-		},
-		imageSourcePath: "./src/assets/images/projects/g4560.gif",
-		link: ""
-	},
-	{
-		title: "Gym room",
-		information: {
-			en: "3D gym visualization",
-			ru: "3D визуализация спортзала"
-		},
-		imageSourcePath: "./src/assets/images/projects/gym.png",
-		link: ""
-	},
-	{
-		title: "Ping pong room",
-		information: {
-			en: "3D ping pong room render",
-			ru: "3D визуализация комнаты для игры в пинг понг"
-		},
-		imageSourcePath: "./src/assets/images/projects/ping_pong.png",
-		link: ""
-	},
-	{
-		title: "Poison",
-		information: {
-			en: "Pixel art",
-			ru: "Пиксель арт"
-		},
-		imageSourcePath: "./src/assets/images/projects/poison.png",
-		link: ""
-	},
+export default [
+  {
+    title: {
+      ru: "Деревце",
+      en: "Wood",
+    },
+    tags: ["pixel_art", "work"],
+    dateOfCreation: 1711746000000,
+    images: ["./src/assets/images/projects/lonely.png"],
+    link: "",
+  },
+  {
+    title: {
+      ru: "G4560",
+      en: "G4560",
+    },
+    tags: ["pixel_art", "animation"],
+    dateOfCreation: 1696280400000,
+    images: ["./src/assets/images/projects/g4560.gif"],
+    link: "",
+  },
+  {
+    title: {
+      ru: "Спортзал",
+      en: "Gym",
+    },
+    tags: ["3D", "interior_design", "work"],
+    dateOfCreation: 1710018000000,
+    images: [
+      "./src/assets/images/projects/gym/gym_01.png",
+      "./src/assets/images/projects/gym/gym_02.png",
+    ],
+    link: "",
+  },
+  {
+    title: {
+      ru: "Пинг понг комната",
+      en: "Ping pong room",
+    },
+    tags: ["3D", "interior_design", "work"],
+    dateOfCreation: 1710190800000,
+    images: [
+      "./src/assets/images/projects/ping_pong/ping_pong_01.png",
+      "./src/assets/images/projects/ping_pong/ping_pong_02.png",
+    ],
+    link: "",
+  },
+  {
+    title: {
+      ru: "Отрава",
+      en: "Poison",
+    },
+    tags: ["pixel_art", "work"],
+    dateOfCreation: 1691874000000,
+    images: ["./src/assets/images/projects/poison.png"],
+    link: "",
+  },
+  {
+    title: {
+      ru: "Кружка",
+      en: "Cup",
+    },
+    tags: ["3D", "render"],
+    dateOfCreation: 1715806800000,
+    images: ["./src/assets/images/projects/cup.png"],
+    link: "",
+  },
+  {
+    title: {
+      ru: "Кофейня",
+      en: "Coffee shop",
+    },
+    tags: ["3D", "interior_design", "work"],
+    dateOfCreation: 1714251600000,
+    images: [
+      "./src/assets/images/projects/coffee_shop/coffee_shop_01.png",
+      "./src/assets/images/projects/coffee_shop/coffee_shop_02.png",
+    ],
+    link: "",
+  },
+  {
+    title: {
+      ru: "Ghost pay",
+      en: "Ghost pay",
+    },
+    tags: ["web_application", "freelance", "work"],
+    dateOfCreation: 1633035600000,
+    images: ["./src/assets/images/projects/ghost_pay.png"],
+    link: "",
+  },
+  {
+    title: {
+      ru: "Light pay",
+      en: "Light pay",
+    },
+    tags: ["web_application", "freelance", "work"],
+    dateOfCreation: 1639256400000,
+    images: ["./src/assets/images/projects/light_pay.png"],
+    link: "",
+  },
+  {
+    title: {
+      ru: "React pizza",
+      en: "React pizza",
+    },
+    tags: ["web_application", "practice", "work"],
+    dateOfCreation: 1629666000000,
+    images: ["./src/assets/images/projects/react_pizza.png"],
+    link: "https://wyeth228.github.io/react-pizza/",
+  },
+  {
+    title: {
+      ru: "Weather knower",
+      en: "Weather knower",
+    },
+    tags: ["web_application", "practice", "work"],
+    dateOfCreation: 1691096400000,
+    images: ["./src/assets/images/projects/weather_knower.png"],
+    link: "https://wyeth228.github.io/weather-knower/",
+  },
 ];

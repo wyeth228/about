@@ -1,143 +1,225 @@
-import { LANGUAGES } from "./enums/languages.js";
-import { projects } from "./data/projects.js";
-import { textTranslations } from "./data/text_translations.js";
+import LANGUAGES from "./enums/languages.js";
+import projects from "./data/projects.js";
+import textTranslations from "./data/text_translations.js";
+import formatDate from "./utils/formatDate.js";
+import cloneElements from "./utils/cloneElements.js";
+import reaction from "./utils/reaction.js";
 
 var app = {
-	language: LANGUAGES.EN,
+  language: LANGUAGES.EN,
 };
 
 function initInfiniteSlider() {
-	var allSlideElements = document.getElementsByClassName("skill");
-	var slidesWrapper = document.getElementsByClassName("skills-wrapper")[0];
-	
-	var allSlideElementsLength = allSlideElements.length;
-	
-	for(var i = 0; i < allSlideElementsLength; ++i) {
-		var slide = allSlideElements[i];
-
-		var slideNodeClone = slide.cloneNode(true);
-
-		slidesWrapper.appendChild(slideNodeClone);
-	}
+  cloneElements("skills-wrapper", "skill");
 }
 
 function initProjectPopup() {
-	var rootElement = document.getElementsByClassName("project-popup")[0];
-	var title = rootElement.querySelector(".project-popup__title");
-	var information = rootElement.querySelector(".project-popup__information");	
-	var link = rootElement.querySelector(".project-popup__link");	
-	var image = rootElement.querySelector(".project-popup__image");
-	
-	if (!rootElement) {
-		console.error("Cannot find a root element of project popup");
-		
-		return;
-	}
+  var currentProjectIdx = 0;
 
-	rootElement.addEventListener("click", function(event) {
-		if (
-			event.target.classList.contains("project-popup") 
-			|| 
-			event.target.classList.contains("project-popup__close-button")	
-		) {	
-			rootElement.classList.add("project-popup_hidden");
-		}
-	});
-	
-	return {
-		closePopup: function() {
-			rootElement.classList.add("project-popup_hidden");
-		},
-		activatePopup: function(projectIdx) {
-			title.innerHTML = projects[projectIdx].title;
-			information.innerHTML = projects[projectIdx].information[app.language];
-			image.src = projects[projectIdx].imageSourcePath;
-		
-			if (!projects[projectIdx].link) {
-				link.classList.add("project-popup__link_hidden");		
-			} else {
-				link.href = projects[projectIdx].link;
-				link.classList.remove("project-popup__link_hidden");
-			}
-			
-			rootElement.classList.remove("project-popup_hidden");
-		}
-	}
+  var popupViewState = reaction({
+    root: {
+      className: "project-popup",
+      hidden: true,
+      hiddenClassName: "project-popup_hidden",
+      onclick: function (event) {
+        if (
+          event.target.classList.contains("project-popup") ||
+          event.target.classList.contains("project-popup__close-button")
+        ) {
+          popupViewState.root.hidden = true;
+        }
+      },
+    },
+    title: {
+      value: "",
+      isAttributeValue: false,
+      className: "project-popup__title",
+    },
+    tags: {
+      value: "",
+      isAttributeValue: false,
+      className: "project-popup__tags",
+    },
+    date: {
+      value: "",
+      isAttributeValue: false,
+      className: "project-popup__date",
+    },
+    link: {
+      value: "",
+      isAttributeValue: true,
+      attributeName: "href",
+      className: "project-popup__link",
+      hidden: false,
+      hiddenClassName: "project-popup__link_hidden",
+    },
+    imageSrc: {
+      value: "",
+      isAttributeValue: true,
+      attributeName: "src",
+      className: "project-popup__image",
+    },
+    currentSlide: {
+      value: 1,
+      className: "project-popup__current-slide",
+    },
+    slidesTotal: {
+      value: 1,
+      className: "project-popup__slides-total",
+    },
+    slideButtonLeft: {
+      className: "project-popup__slide-button-left",
+      onclick: function () {
+        if (popupViewState.currentSlide.value > 1) {
+          popupViewState.currentSlide.value--;
+
+          popupViewState.imageSrc.value =
+            projects[currentProjectIdx].images[
+              popupViewState.currentSlide.value - 1
+            ];
+        }
+      },
+    },
+    slideButtonRight: {
+      className: "project-popup__slide-button-right",
+      onclick: function () {
+        if (
+          popupViewState.currentSlide.value < popupViewState.slidesTotal.value
+        ) {
+          popupViewState.currentSlide.value++;
+
+          popupViewState.imageSrc.value =
+            projects[currentProjectIdx].images[
+              popupViewState.currentSlide.value - 1
+            ];
+        }
+      },
+    },
+  });
+
+  var closePopup = function () {
+    popupViewState.root.hidden = true;
+  };
+
+  var activatePopup = function (projectIdx) {
+    currentProjectIdx = projectIdx;
+
+    popupViewState.slidesTotal.value = projects[projectIdx].images.length;
+
+    popupViewState.title.value =
+      "💼 " + projects[currentProjectIdx].title[app.language];
+    popupViewState.tags.value = projects[currentProjectIdx].tags
+      .map((tag) => "#" + tag)
+      .join(" ");
+    popupViewState.date.value = formatDate(
+      projects[currentProjectIdx].dateOfCreation,
+      app.language
+    );
+    popupViewState.imageSrc.value = projects[currentProjectIdx].images[0];
+    popupViewState.currentSlide.value = 1;
+    popupViewState.slidesTotal.value =
+      projects[currentProjectIdx].images.length;
+
+    if (!projects[currentProjectIdx].link) {
+      popupViewState.link.hidden = true;
+    } else {
+      popupViewState.link.hidden = false;
+      popupViewState.link.value = projects[currentProjectIdx].link;
+    }
+
+    popupViewState.root.hidden = false;
+  };
+
+  return [closePopup, activatePopup];
 }
 
-function initProjects(projectPopup) {
-	var projectListParent = document.getElementsByClassName("project-list")[0];
-	
-	if (!projectPopup.closePopup || !projectListParent) {
-		console.error("Projects initialization error");
-		
-		return;
-	}
-	
-	for(var i = 0; i < projects.length; ++i) {
-		var newImageElement = document.createElement("img");
-		newImageElement.src = projects[i].imageSourcePath;
-		newImageElement.classList.add("project__image");
-		
-		var newProjectElement = document.createElement("div");
-		newProjectElement.classList.add("project");
-		newProjectElement.dataset.projectIdx = i;
+function initProjects(closePopup, activatePopup) {
+  var projectListParent = document.getElementsByClassName("project-list")[0];
 
-		newProjectElement.appendChild(newImageElement);	
-		
-		projectListParent.appendChild(newProjectElement);
-		
-		newProjectElement.addEventListener("click", function(event) {
-			projectPopup.activatePopup(Number(event.target.dataset.projectIdx));
-		});
-	}
+  if (!closePopup || !projectListParent) {
+    console.error(
+      "initProjects error: cannot find the root or popup not initialed"
+    );
+
+    return;
+  }
+
+  projects.sort((a, b) => a.dateOfCreation - b.dateOfCreation);
+
+  for (let i = 0; i < projects.length; ++i) {
+    var newImageElement = document.createElement("img");
+    newImageElement.src = projects[i].images[0];
+    newImageElement.classList.add("project__image");
+
+    var newProjectElement = document.createElement("div");
+    newProjectElement.classList.add("project");
+
+    newProjectElement.appendChild(newImageElement);
+
+    projectListParent.appendChild(newProjectElement);
+
+    newProjectElement.addEventListener("click", function () {
+      activatePopup(i);
+    });
+  }
 }
 
 function initYear() {
-	var date = new Date();
-	document.getElementById("year").innerHTML = date.getFullYear();	
+  var date = new Date();
+  document.getElementById("year").innerHTML = date.getFullYear();
 }
 
 function initTranslations() {
-	for(var elementClassName of Object.keys(textTranslations)) {
-		var element = document.getElementsByClassName(elementClassName)[0];
-		
-		if (!element) {
-			continue;
-		}
-	
-		element.innerHTML = textTranslations[elementClassName][app.language];
-	}
+  for (var elementClassName of Object.keys(textTranslations)) {
+    var element = document.getElementsByClassName(elementClassName)[0];
+
+    if (!element) {
+      console.error(
+        "initTranslations error: cannot find the " +
+          elementClassName +
+          " element"
+      );
+
+      continue;
+    }
+
+    element.innerHTML = textTranslations[elementClassName][app.language];
+  }
 }
 
 function initLanguage() {
-	if (!navigator.language) {	
-		app.language = LANGUGES.EN;
-	
-		return;
-	}
-	
-	var navigatorLanguage = navigator.language.split("-")[0];
-	
-	if (navigatorLanguage === LANGUAGES.EN || navigatorLanguage === LANGUAGES.RU) {
-		app.language = navigatorLanguage;
-	} else {
-		app.language = LANGUAGES.EN;
-	}
+  if (!navigator.language) {
+    app.language = LANGUAGES.EN;
+
+    return;
+  }
+
+  var navigatorLanguage = navigator.language.split("-")[0];
+
+  if (
+    navigatorLanguage === LANGUAGES.EN ||
+    navigatorLanguage === LANGUAGES.RU
+  ) {
+    app.language = navigatorLanguage;
+  } else {
+    app.language = LANGUAGES.EN;
+  }
 }
 
 function initApplication() {
-	initLanguage();
-	
-	initYear();
-	
-	initInfiniteSlider();
-	
-	var projectPopup = initProjectPopup();
-	
-	initProjects(projectPopup);
+  initLanguage();
 
-	initTranslations();
+  initYear();
+
+  initInfiniteSlider();
+
+  var [closePopup, activatePopup] = initProjectPopup();
+
+  initProjects(closePopup, activatePopup);
+
+  initTranslations();
+
+  particlesJS.load("particles", "./src/json/particles_config.json");
 }
 
 document.addEventListener("DOMContentLoaded", initApplication);
