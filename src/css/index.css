@@ -19,7 +19,7 @@ body {
   position: relative;
 }
 
-:user-se .body_hidden {
+.body_hidden {
   overflow: hidden;
 }
 
