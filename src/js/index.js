@@ -100,7 +100,7 @@ function initProjectPopup() {
             this.viewState.currentSlide.value
           ];
 
-        this.swipeSlideRight(nextImageSrc || "");
+        this.swipeSlideRight(nextImageSrc || "", app.alreadyLoadedImages);
       },
     },
   };
