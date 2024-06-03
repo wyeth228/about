@@ -1,3 +1,14 @@
+class Component {
+  constructor(dataState, viewState, methods) {
+    this.dataState = dataState;
+    this.viewState = viewState;
+
+    for (var methodKey in methods) {
+      this[methodKey] = methods[methodKey];
+    }
+  }
+}
+
 var elements = {};
 
 function registerProxyToElement(elementState) {
@@ -30,7 +41,11 @@ function registerProxyToElement(elementState) {
   return new Proxy(elementState, handler);
 }
 
-export default function (viewState) {
+export default function (componentState) {
+  var { dataState, viewState, methods } = componentState;
+
+  var newComponent = new Component(dataState, viewState, methods);
+
   for (var elementStateKey in viewState) {
     var elementState = viewState[elementStateKey];
 
@@ -43,10 +58,10 @@ export default function (viewState) {
     if (elementState.onclick) {
       elements[elementState.className].addEventListener(
         "click",
-        elementState.onclick
+        elementState.onclick.bind(newComponent)
       );
     }
   }
 
-  return viewState;
+  return newComponent;
 }

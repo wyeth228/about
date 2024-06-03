@@ -19,6 +19,10 @@ body {
   position: relative;
 }
 
+:user-se .body_hidden {
+  overflow: hidden;
+}
+
 svg,
 path,
 g {

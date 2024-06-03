@@ -1,12 +1,17 @@
 import LANGUAGES from "./enums/languages.js";
 import projects from "./data/projects.js";
 import textTranslations from "./data/text_translations.js";
-import formatDate from "./utils/formatDate.js";
 import cloneElements from "./utils/cloneElements.js";
-import reaction from "./utils/reaction.js";
+import closePopup from "./app/project_popup/closePopup.js";
+import activatePopup from "./app/project_popup/activatePopup.js";
+import swipeSlideLeft from "./app/project_popup/swipeSlideLeft.js";
+import swipeSlideRight from "./app/project_popup/swipeSlideRight.js";
+import reaction from "./libs/reaction/index.js";
+import formatDate from "./utils/formatDate.js";
 
 var app = {
   language: LANGUAGES.EN,
+  alreadyLoadedImages: {},
 };
 
 function initInfiniteSlider() {
@@ -14,9 +19,11 @@ function initInfiniteSlider() {
 }
 
 function initProjectPopup() {
-  var currentProjectIdx = 0;
+  var dataState = {
+    currentProjectIdx: 0,
+  };
 
-  var popupViewState = reaction({
+  var viewState = {
     root: {
       className: "project-popup",
       hidden: true,
@@ -26,9 +33,14 @@ function initProjectPopup() {
           event.target.classList.contains("project-popup") ||
           event.target.classList.contains("project-popup__close-button")
         ) {
-          popupViewState.root.hidden = true;
+          this.closePopup(viewState);
         }
       },
+    },
+    loading: {
+      className: "project-popup__loading",
+      hidden: true,
+      hiddenClassName: "project-popup__loading_hidden",
     },
     title: {
       value: "",
@@ -53,8 +65,10 @@ function initProjectPopup() {
       hidden: false,
       hiddenClassName: "project-popup__link_hidden",
     },
-    imageSrc: {
+    image: {
       value: "",
+      hidden: false,
+      hiddenClassName: "project-popup__image_hidden",
       isAttributeValue: true,
       attributeName: "src",
       className: "project-popup__image",
@@ -70,76 +84,46 @@ function initProjectPopup() {
     slideButtonLeft: {
       className: "project-popup__slide-button-left",
       onclick: function () {
-        if (popupViewState.currentSlide.value > 1) {
-          popupViewState.currentSlide.value--;
+        var previousImageSrc =
+          projects[this.dataState.currentProjectIdx].images[
+            this.viewState.currentSlide.value - 2
+          ];
 
-          popupViewState.imageSrc.value =
-            projects[currentProjectIdx].images[
-              popupViewState.currentSlide.value - 1
-            ];
-        }
+        this.swipeSlideLeft(previousImageSrc || "");
       },
     },
     slideButtonRight: {
       className: "project-popup__slide-button-right",
       onclick: function () {
-        if (
-          popupViewState.currentSlide.value < popupViewState.slidesTotal.value
-        ) {
-          popupViewState.currentSlide.value++;
+        var nextImageSrc =
+          projects[this.dataState.currentProjectIdx].images[
+            this.viewState.currentSlide.value
+          ];
 
-          popupViewState.imageSrc.value =
-            projects[currentProjectIdx].images[
-              popupViewState.currentSlide.value - 1
-            ];
-        }
+        this.swipeSlideRight(nextImageSrc || "");
       },
     },
+  };
+
+  var methods = {
+    closePopup,
+    activatePopup,
+    swipeSlideLeft,
+    swipeSlideRight,
+  };
+
+  return reaction({
+    dataState,
+    viewState,
+    methods,
   });
-
-  var closePopup = function () {
-    popupViewState.root.hidden = true;
-  };
-
-  var activatePopup = function (projectIdx) {
-    currentProjectIdx = projectIdx;
-
-    popupViewState.slidesTotal.value = projects[projectIdx].images.length;
-
-    popupViewState.title.value =
-      "💼 " + projects[currentProjectIdx].title[app.language];
-    popupViewState.tags.value = projects[currentProjectIdx].tags
-      .map((tag) => "#" + tag)
-      .join(" ");
-    popupViewState.date.value = formatDate(
-      projects[currentProjectIdx].dateOfCreation,
-      app.language
-    );
-    popupViewState.imageSrc.value = projects[currentProjectIdx].images[0];
-    popupViewState.currentSlide.value = 1;
-    popupViewState.slidesTotal.value =
-      projects[currentProjectIdx].images.length;
-
-    if (!projects[currentProjectIdx].link) {
-      popupViewState.link.hidden = true;
-    } else {
-      popupViewState.link.hidden = false;
-      popupViewState.link.value = projects[currentProjectIdx].link;
-    }
-
-    popupViewState.root.hidden = false;
-  };
-
-  return [closePopup, activatePopup];
 }
 
-function initProjects(closePopup, activatePopup) {
+function initProjects(projectPopupComponent) {
   var projectListParent = document.getElementsByClassName("project-list")[0];
 
-  if (!closePopup || !projectListParent) {
-    console.error(
-      "initProjects error: cannot find the root or popup not initialed"
-    );
+  if (!projectPopupComponent) {
+    console.error("initProjects error: we need a projectPopupComponent");
 
     return;
   }
@@ -158,8 +142,15 @@ function initProjects(closePopup, activatePopup) {
 
     projectListParent.appendChild(newProjectElement);
 
-    newProjectElement.addEventListener("click", function () {
-      activatePopup(i);
+    newProjectElement.addEventListener("click", () => {
+      projectPopupComponent.activatePopup(
+        i,
+        projects[i].images,
+        projects[i].title[app.language],
+        projects[i].tags,
+        formatDate(projects[i].dateOfCreation, app.language),
+        projects[i].link
+      );
     });
   }
 }
@@ -208,16 +199,12 @@ function initLanguage() {
 
 function initApplication() {
   initLanguage();
-
   initYear();
-
   initInfiniteSlider();
-
-  var [closePopup, activatePopup] = initProjectPopup();
-
-  initProjects(closePopup, activatePopup);
-
   initTranslations();
+
+  var projectPopupComponent = initProjectPopup();
+  initProjects(projectPopupComponent);
 
   particlesJS.load("particles", "./src/json/particles_config.json");
 }

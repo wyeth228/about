@@ -1,13 +1,8 @@
 .info-about {
   margin-top: 200px;
-
-  position: relative;
 }
 
 .info-about__main-text {
-  position: relative;
-  z-index: 1000;
-
   font-size: 34px;
 
   max-width: 340px;
@@ -29,15 +24,6 @@
   letter-spacing: 0.1rem;
 
   max-width: 500px;
-}
-
-.info-about__background {
-  position: absolute;
-  top: 25%;
-  left: 40%;
-  z-index: 1;
-
-  max-width: 620px;
 }
 
 @media screen and (max-width: 768px) {
