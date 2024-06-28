@@ -1,10 +1,9 @@
 import months from "../data/months.js";
 
 /**
- *
  * @param {number} dateInSeconds
  * @param {string} language
- * @returns {string} like this: january 01, 2024
+ * @returns {string} like: january 01, 2024
  */
 export default function (dateInSeconds, language) {
   if (typeof dateInSeconds !== "number") {

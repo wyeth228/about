@@ -1,7 +1,7 @@
 /**
- *
  * @param {string} wrapperClassName
  * @param {string} childClassName: class name of elements which we need to clone
+ * @returns {void}
  */
 export default function (wrapperClassName, childClassName) {
   var children = document.getElementsByClassName(childClassName);

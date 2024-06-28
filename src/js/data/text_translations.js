@@ -1,3 +1,12 @@
+/**
+ * @typedef Translation
+ * @property {string} en
+ * @property {string} ru
+ */
+
+/**
+ * @type {Object.<string, Translation>}
+ */
 export default {
   "main-header__a": {
     en: "contact me",

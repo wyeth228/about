@@ -1,8 +1,25 @@
+/**
+ * @typedef ProjectTitle
+ * @property {string} ru
+ * @property {string} en
+ */
+
+/**
+ * @typedef Project
+ * @property {ProjectTitle} title
+ * @property {string[]} tags
+ * @property {string[]} images
+ * @property {string} link
+ */
+
+/**
+ * @type Project[]
+ */
 export default [
   {
     title: {
       ru: "Деревце",
-      en: "Wood",
+      en: "Tree",
     },
     tags: ["pixel_art", "work"],
     dateOfCreation: 1711746000000,

@@ -1,3 +1,12 @@
+/**
+ * @typedef MonthInfo
+ * @property {string} ru
+ * @property {string} en
+ */
+
+/**
+ * @type {Object.<number, MonthInfo>}
+ */
 export default {
   1: {
     ru: "январь",
