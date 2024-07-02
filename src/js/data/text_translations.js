@@ -18,7 +18,7 @@ export default {
   },
   "info-about__paragraph": {
     en: "А few words about the author: 🖥️full stack developer, 🖌️digital & pixel artist, 🧱3D interior designer",
-    ru: "Пару слов об авторе: 🖥️full stack разработчик, 🖌️digital & pixel художник, 🧱3D дизайнер интерьера, а также, немножко🤏 графический дизайнер",
+    ru: "Пара слов об авторе: 🖥️full stack разработчик, 🖌️digital & pixel художник, 🧱3D дизайнер интерьера, а также, немножко🤏 графический дизайнер",
   },
   "skills-title": {
     en: "Skills",
