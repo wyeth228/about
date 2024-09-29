@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="./src/css/fonts.css" />
     <link rel="stylesheet" href="./src/css/main_header.css" />
     <link rel="stylesheet" href="./src/css/info_about.css" />
-    <link rel="stylesheet" href="./src/css/skills.css" />
-    <link rel="stylesheet" href="./src/css/projects.css" />
-    <link rel="stylesheet" href="./src/css/contact.css" />
+    <link rel="stylesheet" href="./src/css/skills_section.css" />
+    <link rel="stylesheet" href="./src/css/portfolio_section.css" />
+    <link rel="stylesheet" href="./src/css/project_popup.css" />
+    <link rel="stylesheet" href="./src/css/links_section.css" />
     <link rel="stylesheet" href="./src/css/footer.css" />
     <link rel="stylesheet" href="./src/css/index.css" />
 
@@ -20,197 +21,184 @@
     <title>Khas Paykhaev</title>
   </head>
   <body>
-    <div class="particles" id="particles"></div>
-
-    <div class="custom-body">
-      <header class="main-header">
-        <div class="main-wrapper">
-          <div class="main-header__inner">
-            <div class="main-header__left-side">
-              <h1 class="main-header__nickname">wyeth</h1>
-              <span class="main-header__nickname-number">228</span>
-            </div>
-            <div class="main-header__right-side">
-              <a class="main-header__a" href="#contact">связаться</a>
-            </div>
+    <header class="main-header">
+      <div class="main-wrapper">
+        <div class="main-header__inner">
+          <div class="main-header__left-side">
+            <h1 class="main-header__nickname">wyeth</h1>
+            <span class="main-header__nickname-number">228</span>
+          </div>
+          <div class="main-header__right-side">
+            <a class="main-header__a" href="#contact">связаться</a>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <article class="info-about">
-        <div class="main-wrapper">
-          <p class="info-about__main-text">Hello everyone and welcome!</p>
-          <p class="info-about__paragraph">
-            Пару слов об авторе: 🖥️full stack разработчик, 🖌️digital & pixel
-            художник, 🧱3D дизайнер интерьера, а также, немножко🤏 графический
-            дизайнер
-          </p>
+    <article class="info-about">
+      <div class="main-wrapper">
+        <p class="info-about__main-text">Hello everyone and welcome!</p>
+        <p class="info-about__paragraph">
+          Пару слов об авторе: 🖥️full stack разработчик, 🖌️digital & pixel
+          художник, 🧱3D дизайнер интерьера, а также, немножко🤏 графический
+          дизайнер
+        </p>
+      </div>
+    </article>
+
+    <section class="section skills-section">
+      <div class="main-wrapper">
+        <h2 class="section__title skills-section__title">Навыки</h2>
+      </div>
+
+      <div class="skills-wrapper">
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_html.png"
+            alt="html"
+          />
+
+          <h3 class="skill__name">HTML</h3>
         </div>
-      </article>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_css.png"
+            alt="css"
+          />
 
-      <section class="section">
-        <div class="main-wrapper">
-          <div class="section__title-wrapper section__title-wrapper_align-left">
-            <div class="four-lines">
-              <div class="four-lines__line"></div>
-              <div class="four-lines__line"></div>
-              <div class="four-lines__line"></div>
-              <div class="four-lines__line"></div>
-            </div>
-
-            <h2 class="section__title skills-title">Навыки</h2>
-          </div>
+          <h3 class="skill__name">CSS</h3>
         </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_js.png"
+            alt="js"
+          />
 
-        <div class="skill-list">
-          <div class="skills-wrapper">
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_html.png"
-                alt="html"
-              />
-
-              <h3 class="skill__name">HTML</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_css.png"
-                alt="css"
-              />
-
-              <h3 class="skill__name">CSS</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_js.png"
-                alt="js"
-              />
-
-              <h3 class="skill__name">JavaScript</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_node_js.png"
-                alt="node.js"
-              />
-
-              <h3 class="skill__name">Node.js</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_ts.png"
-                alt="ts"
-              />
-
-              <h3 class="skill__name">TypeScript</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_php.png"
-                alt="php"
-              />
-
-              <h3 class="skill__name">PHP</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_vue.png"
-                alt="vue"
-              />
-
-              <h3 class="skill__name">Vue</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_react.png"
-                alt="react"
-              />
-
-              <h3 class="skill__name">React</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_nuxt_js.png"
-                alt="nuxt.js"
-              />
-
-              <h3 class="skill__name">Nuxt.js</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_mysql.png"
-                alt="mysql"
-              />
-
-              <h3 class="skill__name">MySQL</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_scss.png"
-                alt="scss"
-              />
-
-              <h3 class="skill__name">SCSS</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_less.png"
-                alt="less"
-              />
-
-              <h3 class="skill__name">less</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_jest.png"
-                alt="jest"
-              />
-
-              <h3 class="skill__name">Jest</h3>
-            </div>
-            <div class="skill">
-              <img
-                class="skill__image"
-                src="./src/assets/images/skill_git.png"
-                alt="git"
-              />
-
-              <h3 class="skill__name">Git</h3>
-            </div>
-          </div>
+          <h3 class="skill__name">JavaScript</h3>
         </div>
-      </section>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_node_js.png"
+            alt="node.js"
+          />
 
-      <section class="section portfolio-section">
-        <h2 class="section__title section__title_center portfolio-title">
-          Портфолио
-        </h2>
+          <h3 class="skill__name">Node.js</h3>
+        </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_ts.png"
+            alt="ts"
+          />
 
-        <div id="project-popup"></div>
+          <h3 class="skill__name">TypeScript</h3>
+        </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_php.png"
+            alt="php"
+          />
 
-        <div class="project-list"></div>
-      </section>
+          <h3 class="skill__name">PHP</h3>
+        </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_vue.png"
+            alt="vue"
+          />
 
-      <section class="section">
-        <div class="main-wrapper">
-          <h2 class="section__title contact-title">Контакты</h2>
+          <h3 class="skill__name">Vue</h3>
+        </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_react.png"
+            alt="react"
+          />
 
-          <div class="contact" id="contact">
+          <h3 class="skill__name">React</h3>
+        </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_nuxt_js.png"
+            alt="nuxt.js"
+          />
+
+          <h3 class="skill__name">Nuxt.js</h3>
+        </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_mysql.png"
+            alt="mysql"
+          />
+
+          <h3 class="skill__name">MySQL</h3>
+        </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_scss.png"
+            alt="scss"
+          />
+
+          <h3 class="skill__name">SCSS</h3>
+        </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_less.png"
+            alt="less"
+          />
+
+          <h3 class="skill__name">less</h3>
+        </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_jest.png"
+            alt="jest"
+          />
+
+          <h3 class="skill__name">Jest</h3>
+        </div>
+        <div class="skill">
+          <img
+            class="skill__image"
+            src="./src/assets/images/skill_git.png"
+            alt="git"
+          />
+
+          <h3 class="skill__name">Git</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio-section">
+      <h2 class="section__title section__title_center portfolio-title">
+        Портфолио
+      </h2>
+
+      <div id="project-popup"></div>
+
+      <div class="project-list"></div>
+    </section>
+
+    <section class="section">
+      <div class="main-wrapper">
+        <div class="links-section__inner">
+          <h2 class="section__title links-section__title">Ссылки</h2>
+
+          <div class="links">
             <a
-              class="contact-item"
+              class="links__item"
               href="https://vk.com/wyeth228"
               target="_blank"
             >
@@ -226,11 +214,7 @@
                 />
               </svg>
             </a>
-            <a
-              class="contact-item"
-              href="https://t.me/wyeth228"
-              target="_blank"
-            >
+            <a class="links__item" href="https://t.me/wyeth228" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 50 50"
@@ -244,7 +228,7 @@
               </svg>
             </a>
             <a
-              class="contact-item"
+              class="links__item"
               href="https://github.com/wyeth228"
               target="_blank"
             >
@@ -260,14 +244,14 @@
               </svg>
             </a>
           </div>
-          <div class="footer">
-            <h3>&copy; Khas Paykhaev, <span id="year">2024</span></h3>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
+
+    <div class="footer">
+      <h3>&copy; Khas Paykhaev, <span id="year">2024</span></h3>
     </div>
 
-    <script defer src="./src/js/libs/particles.min.js"></script>
-    <script defer type="module" src="./src/js/index.js"></script>
+    <script defer src="./src/js/index.js" type="module"></script>
   </body>
 </html>

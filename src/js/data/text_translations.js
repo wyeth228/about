@@ -17,10 +17,10 @@ export default {
     ru: "Hello everyone and welcome!",
   },
   "info-about__paragraph": {
-    en: "А few words about the author: 🖥️full stack developer, 🖌️digital & pixel artist, 🧱3D interior designer",
+    en: "About: 🖥️full stack developer, 🖌️digital & pixel artist, 🧱3D interior designer",
     ru: "Пару слов об авторе: 🖥️full stack разработчик, 🖌️digital & pixel художник, 🧱3D дизайнер интерьера, а также, немножко🤏 графический дизайнер",
   },
-  "skills-title": {
+  "skills-section__title": {
     en: "Skills",
     ru: "Навыки",
   },
@@ -28,8 +28,8 @@ export default {
     en: "Portfolio",
     ru: "Портфолио",
   },
-  "contact-title": {
-    en: "Contact me",
-    ru: "Контакты",
+  "links-section__title": {
+    en: "Links",
+    ru: "Ссылки",
   },
 };

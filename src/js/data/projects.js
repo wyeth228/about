@@ -18,7 +18,7 @@
 export default [
   {
     title: {
-      ru: "Деревце",
+      ru: "Tree",
       en: "Tree",
     },
     tags: ["pixel_art", "work"],
@@ -64,7 +64,7 @@ export default [
   },
   {
     title: {
-      ru: "Отрава",
+      ru: "Poison",
       en: "Poison",
     },
     tags: ["pixel_art", "work"],
