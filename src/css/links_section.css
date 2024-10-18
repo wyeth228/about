@@ -1,3 +1,33 @@
+.links-section {
+  background-color: var(--color-1);
+  color: var(--color-2);
+
+  position: relative;
+}
+
+.links-section:before,
+.links-section:after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 4px;
+
+  background: #212121;
+}
+
+.links-section:before {
+  top: 6px;
+}
+
+.links-section:after {
+  bottom: 6px;
+}
+
 .links-section__inner {
   display: flex;
   justify-content: space-between;
@@ -29,12 +59,16 @@
   margin-right: 0;
 }
 
+.links__item svg path {
+  fill: var(--color-2);
+}
+
 .links__item:hover {
-  background-color: var(--color-1);
+  background-color: var(--color-2);
 }
 
 .links__item:hover svg path {
-  fill: var(--color-2);
+  fill: var(--color-1);
 }
 
 @media screen and (max-width: 768px) {

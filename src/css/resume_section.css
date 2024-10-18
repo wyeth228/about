@@ -1,0 +1,77 @@
+.resume-section {
+  background-color: var(--color-1);
+  color: var(--color-2);
+
+  position: relative;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.resume-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resume-part {
+  min-width: 350px;
+
+  color: var(--color-1);
+  background-color: var(--color-2);
+
+  margin-top: 40px;
+  margin-right: 20px;
+  padding: 20px;
+
+  border-radius: 4px;
+}
+
+.resume-part__title {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.resume-section:before,
+.resume-section:after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 4px;
+
+  background: #212121;
+}
+
+.resume-section:before {
+  top: 6px;
+}
+
+.resume-section:after {
+  bottom: 6px;
+}
+
+@media screen and (max-width: 576px) {
+  .resume-part {
+    width: 100%;
+
+    margin-top: 0;
+    margin-right: 0;
+
+    border-radius: 0;
+
+    background: none;
+
+    color: var(--color-2);
+  }
+
+  .resume-part:first-child {
+    margin-top: 40px;
+  }
+}

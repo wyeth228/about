@@ -1,38 +1,12 @@
 .portfolio-section {
-  margin-top: 100px;
   padding-top: 40px;
   padding-bottom: 40px;
-
-  background-color: var(--color-1);
 
   position: relative;
 }
 
-.portfolio-section:before,
-.portfolio-section:after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-
-  display: block;
-
-  width: 100%;
-  height: 4px;
-
-  background: #212121;
-}
-
-.portfolio-section:before {
-  top: 6px;
-}
-
-.portfolio-section:after {
-  bottom: 6px;
-}
-
 .portfolio-title {
-  color: var(--color-2);
+  color: var(--color-1);
 }
 
 .project-list {

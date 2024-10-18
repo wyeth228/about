@@ -135,4 +135,37 @@ export default [
     images: ["./src/assets/images/projects/weather_knower.png"],
     link: "https://wyeth228.github.io/weather-knower/",
   },
+  {
+    title: {
+      ru: "Aircraft",
+      en: "Aircraft",
+    },
+    tags: ["pixel_art", "work"],
+    dateOfCreation: 1723323600000,
+    images: ["./src/assets/images/projects/aircraft.png"],
+    link: "",
+  },
+  {
+    title: {
+      ru: "Storm is coming",
+      en: "Storm is coming",
+    },
+    tags: ["pixel_art", "work"],
+    dateOfCreation: 1726347600000,
+    images: ["./src/assets/images/projects/storm_is_coming.png"],
+    link: "",
+  },
+  {
+    title: {
+      ru: "Into the storm",
+      en: "Into the storm",
+    },
+    tags: ["pixel_art", "work"],
+    dateOfCreation: 1728680400000,
+    images: [
+      "./src/assets/images/projects/into_the_storm/into_the_storm.png",
+      "./src/assets/images/projects/into_the_storm/into_the_storm_progress.gif",
+    ],
+    link: "",
+  },
 ];

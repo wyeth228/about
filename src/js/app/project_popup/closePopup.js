@@ -9,8 +9,6 @@ import removeOnTransitionEnd from "../../utils/removeOnTransitionEnd.js";
 function close(rootElement, onTransitionEndCallback) {
   hidePopupElement(rootElement);
 
-  returnBackScrollForBody();
-
   var popupContent = rootElement.children[0];
 
   removeOnTransitionEnd(popupContent, onTransitionEndCallback);
@@ -28,6 +26,7 @@ export default function closePopup(event, rootElement) {
 
   translatePopupToBottom(rootElement);
   changePopupOpacity(rootElement, 0);
+  returnBackScrollForBody();
 
   var onTransitionEndCallback = function () {
     close(rootElement, onTransitionEndCallback);

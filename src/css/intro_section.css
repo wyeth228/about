@@ -1,0 +1,126 @@
+.intro-section {
+  height: 100vh;
+
+  position: relative;
+
+  background: url("../assets/images/intro_background.png") no-repeat top/cover
+    fixed;
+}
+
+.info-about {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-about__main-text {
+  font-family: "Peace Sans";
+  font-size: 80px;
+  font-weight: 400;
+
+  letter-spacing: -0.04em;
+
+  padding-right: 12px;
+  padding-top: 6px;
+  margin: 0 auto;
+
+  text-shadow: 0px 0px 10px gray;
+
+  text-align: center;
+}
+
+.info-about__paragraph {
+  font-size: 20px;
+
+  margin: 20px auto;
+
+  opacity: 0.5;
+
+  letter-spacing: 0.1rem;
+
+  max-width: 400px;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .info-about__main-text {
+    font-size: 54px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .info-about__main-text {
+    font-size: 30px;
+  }
+
+  .info-about__paragraph {
+    font-size: 18px;
+  }
+}
+
+.main-header {
+  width: 100%;
+
+  padding: 24px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-header__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header__left-side {
+  display: flex;
+  align-items: flex-end;
+}
+
+.main-header__right-side {
+  display: flex;
+  align-items: center;
+}
+
+.main-header__nickname {
+  font-family: "Fugaz One";
+  font-size: 34px;
+  text-shadow: 0 0 10px var(--color-1);
+}
+
+.main-header__nickname-number {
+  font-family: "Fugaz One";
+  font-size: 30px;
+
+  opacity: 0.2;
+
+  margin-left: 4px;
+}
+
+.main-header__a {
+  color: var(--color-1);
+  font-size: 18px;
+  letter-spacing: 0.1em;
+
+  padding: 0 4px 0 4px;
+
+  text-decoration: none;
+}
+
+.main-header__a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 576px) {
+  .main-header {
+    padding: 12px;
+  }
+
+  .main-header__a {
+    font-size: 16px;
+  }
+}

@@ -1,11 +1,10 @@
 .footer {
   padding: 30px;
+  padding-top: 38px;
 
-  color: var(--color-2);
+  color: var(--color-1);
 
   text-align: center;
-
-  background-color: var(--color-1);
 
   position: relative;
 }
