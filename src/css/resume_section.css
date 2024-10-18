@@ -75,3 +75,17 @@
     margin-top: 40px;
   }
 }
+
+@media screen and (max-width: 460px) {
+  .resume-part {
+    min-width: 0;
+  }
+
+  .resume-wrapper {
+    font-size: 12px;
+  }
+
+  .resume-part__title {
+    font-size: 15px;
+  }
+}

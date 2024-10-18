@@ -88,6 +88,10 @@
 }
 
 @media screen and (max-width: 460px) {
+  .project-list {
+    padding: 0;
+  }
+
   .project {
     flex: 0 0 100%;
   }

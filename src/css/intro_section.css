@@ -52,12 +52,18 @@
 }
 
 @media screen and (max-width: 576px) {
+  .info-about__paragraph {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 460px) {
   .info-about__main-text {
-    font-size: 30px;
+    font-size: 34px;
   }
 
   .info-about__paragraph {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -113,6 +119,24 @@
 
 .main-header__a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 576px) {
+  .main-header {
+    padding: 12px;
+  }
+
+  .main-header__a {
+    font-size: 16px;
+  }
+
+  .main-header__nickname {
+    font-size: 28px;
+  }
+
+  .main-header__nickname-number {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 576px) {

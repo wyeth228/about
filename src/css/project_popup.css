@@ -242,3 +242,17 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 460px) {
+  .project-popup__title-wrapper {
+    padding: 16px 0 0 16px;
+  }
+
+  .project-popup__title {
+    font-size: 24px;
+  }
+
+  .project-popup__tags {
+    font-size: 14px;
+  }
+}
