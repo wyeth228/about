@@ -83,7 +83,7 @@ export default {
         <p>- rest api / crud</p>
       </div>
       <div class="resume-part">
-        <p class="resume-title">Other skills:</p>
+        <p class="resume-title">Другие скилы:</p>
         <p>- canvas</p>
         <p>- docker (немножко)</p>
         <p>- кроссбраузерность / адаптивность</p>
