@@ -127,6 +127,15 @@ export default [
   },
   {
     title: {
+      ru: "Interview Bloggers",
+      en: "Interview Bloggers",
+    },
+    tags: ["web_application", "practice", "work"],
+    dateOfCreation: 1630443600000,
+    images: ["./src/assets/images/projects/interview_bloggers.png"],
+  },
+  {
+    title: {
       ru: "Weather knower",
       en: "Weather knower",
     },
