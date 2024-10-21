@@ -65,7 +65,7 @@ export default {
       </div>`,
     ru: `
       <div class="resume-part">
-        <p class="resume-title">Front end:</p>
+        <p class="resume-part__title">Front end:</p>
         <p>- javascript (es5+), typescript</p>
         <p>- vue / vuex / nuxt.js / composition api</p>
         <p>- react / redux (немножко)</p>
@@ -75,7 +75,7 @@ export default {
         <p>- tailwindCSS / materializeCSS</p>
       </div>
       <div class="resume-part">
-        <p class="resume-title">Back end:</p>
+        <p class="resume-part__title">Back end:</p>
         <p>- php / node.js</p>
         <p>- mysql</p>
         <p>- socket.io / express</p>
@@ -83,7 +83,7 @@ export default {
         <p>- rest api / crud</p>
       </div>
       <div class="resume-part">
-        <p class="resume-title">Другие скилы:</p>
+        <p class="resume-part__title">Другие скилы:</p>
         <p>- canvas</p>
         <p>- docker (немножко)</p>
         <p>- кроссбраузерность / адаптивность</p>
