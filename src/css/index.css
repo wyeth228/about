@@ -1,3 +1,10 @@
+/* :root {
+  --color-1: #ccc2bc;
+  --color-2: #131211;
+  --color-3: #131211b2;
+  --color-4: #0e0d0c;
+} */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +18,8 @@ body {
 }
 
 body {
-  color: var(--color-1);
-  background-color: var(--color-2);
+  color: #ccc2bc;
+  background-color: #131211;
 
   font-family: "Roboto", Arial, sans-serif;
 }

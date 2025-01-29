@@ -1,6 +1,6 @@
 .resume-section {
-  background-color: var(--color-1);
-  color: var(--color-2);
+  background-color: #ccc2bc;
+  color: #131211;
 
   position: relative;
 
@@ -17,8 +17,8 @@
 .resume-part {
   min-width: 350px;
 
-  color: var(--color-1);
-  background-color: var(--color-2);
+  color: #ccc2bc;
+  background-color: #131211;
 
   margin-top: 40px;
   margin-right: 20px;
@@ -68,7 +68,7 @@
 
     background: none;
 
-    color: var(--color-2);
+    color: #131211;
   }
 
   .resume-part:first-child {

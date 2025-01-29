@@ -1,6 +1,6 @@
 .links-section {
-  background-color: var(--color-1);
-  color: var(--color-2);
+  background-color: #ccc2bc;
+  color: #131211;
 
   position: relative;
 }
@@ -60,15 +60,15 @@
 }
 
 .links__item svg path {
-  fill: var(--color-2);
+  fill: #131211;
 }
 
 .links__item:hover {
-  background-color: var(--color-2);
+  background-color: #131211;
 }
 
 .links__item:hover svg path {
-  fill: var(--color-1);
+  fill: #ccc2bc;
 }
 
 @media screen and (max-width: 768px) {

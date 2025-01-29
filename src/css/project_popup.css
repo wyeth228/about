@@ -7,7 +7,7 @@
   left: 0;
   z-index: 10000;
 
-  background-color: var(--color-3);
+  background-color: #131211b2;
 
   display: flex;
   justify-content: center;
@@ -26,9 +26,9 @@
   width: 70%;
   height: 80%;
 
-  background-color: var(--color-2);
+  background-color: #131211;
 
-  border-top: 4px solid var(--color-1);
+  border-top: 4px solid #ccc2bc;
 
   position: relative;
 
@@ -39,7 +39,7 @@
 
   will-change: transform;
 
-  box-shadow: 0px 14px 12px var(--color-4);
+  box-shadow: 0px 14px 12px #0e0d0c;
 }
 
 .project-popup__content_hidden {
@@ -81,13 +81,13 @@
 
   margin-top: 10px;
 
-  color: var(--color-1);
+  color: #ccc2bc;
 }
 
 .project-popup__link svg {
   width: 24px;
 
-  stroke: var(--color-1);
+  stroke: #ccc2bc;
 }
 
 .project-popup__link:hover svg {
@@ -135,19 +135,19 @@
 
   border: none;
 
-  background-color: var(--color-2);
+  background-color: #131211;
 }
 
 .project-popup__close-button:hover {
-  background-color: var(--color-1);
+  background-color: #ccc2bc;
 }
 
 .project-popup__close-button:hover svg path {
-  fill: var(--color-2);
+  fill: #131211;
 }
 
 .project-popup__close-button svg path {
-  fill: var(--color-1);
+  fill: #ccc2bc;
 }
 
 .project-popup__slides {
@@ -170,22 +170,22 @@
 
   cursor: pointer;
 
-  background: var(--color-2);
+  background: #131211;
 }
 
 .project-popup__slide-button:active {
-  background: var(--color-1);
+  background: #ccc2bc;
 }
 
 .project-popup__slide-button svg {
   width: 100%;
   height: 100%;
 
-  fill: var(--color-1);
+  fill: #ccc2bc;
 }
 
 .project-popup__slide-button:active svg {
-  fill: var(--color-2);
+  fill: #131211;
 }
 
 .project-popup__slide-quantity {
@@ -210,7 +210,7 @@
 
   border-radius: 100%;
 
-  background-color: var(--color-1);
+  background-color: #ccc2bc;
 
   animation: dot-pulse infinite 1s linear;
 }
