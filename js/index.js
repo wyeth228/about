@@ -5,7 +5,7 @@ var main = function (renderer, localizator, eventBus) {
 
   renderer.onPageRender(localizator.localizeHandler);
 
-  renderer.init(eventBus, "app", ["/"]);
+  renderer.init(eventBus, "app", ["/about"]);
 
   eventBus.onEventHappens("getAppLanguage", function (callback) {
     callback(localizator.getLanguage());
