@@ -1,0 +1,103 @@
+[
+  {
+    "tags": ["pixel_art", "work"],
+    "date_of_creation": 1711746000000,
+    "images": ["./assets/images/projects/lonely.png"],
+    "link": ""
+  },
+  {
+    "tags": ["pixel_art", "animation"],
+    "date_of_creation": 1696280400000,
+    "images": ["./assets/images/projects/g4560.gif"],
+    "link": ""
+  },
+  {
+    "tags": ["3D", "interior_design", "work"],
+    "date_of_creation": 1710018000000,
+    "images": [
+      "./assets/images/projects/gym/gym_01.webp",
+      "./assets/images/projects/gym/gym_02.webp"
+    ],
+    "link": ""
+  },
+  {
+    "tags": ["3D", "interior_design", "work"],
+    "date_of_creation": 1710190800000,
+    "images": [
+      "./assets/images/projects/ping_pong/ping_pong_01.webp",
+      "./assets/images/projects/ping_pong/ping_pong_02.webp"
+    ],
+    "link": ""
+  },
+  {
+    "tags": ["pixel_art", "work"],
+    "date_of_creation": 1691874000000,
+    "images": ["./assets/images/projects/poison.png"],
+    "link": ""
+  },
+  {
+    "tags": ["3D", "render"],
+    "date_of_creation": 1715806800000,
+    "images": ["./assets/images/projects/cup.webp"],
+    "link": ""
+  },
+  {
+    "tags": ["3D", "interior_design", "work"],
+    "date_of_creation": 1714251600000,
+    "images": [
+      "./assets/images/projects/coffee_shop/coffee_shop_01.webp",
+      "./assets/images/projects/coffee_shop/coffee_shop_02.webp"
+    ],
+    "link": ""
+  },
+  {
+    "tags": ["web_application", "freelance", "work"],
+    "date_of_creation": 1633035600000,
+    "images": ["./assets/images/projects/ghost_pay.webp"],
+    "link": ""
+  },
+  {
+    "tags": ["web_application", "freelance", "work"],
+    "date_of_creation": 1639256400000,
+    "images": ["./assets/images/projects/light_pay.webp"],
+    "link": ""
+  },
+  {
+    "tags": ["web_application", "practice", "work"],
+    "date_of_creation": 1629666000000,
+    "images": ["./assets/images/projects/react_pizza.webp"],
+    "link": "https://wyeth228.github.io/react-pizza/"
+  },
+  {
+    "tags": ["web_application", "practice", "work"],
+    "date_of_creation": 1630443600000,
+    "images": ["./assets/images/projects/interview_bloggers.webp"]
+  },
+  {
+    "tags": ["web_application", "practice", "work"],
+    "date_of_creation": 1691096400000,
+    "images": ["./assets/images/projects/weather_knower.webp"],
+    "link": "https://wyeth228.github.io/weather-knower/"
+  },
+  {
+    "tags": ["pixel_art", "work"],
+    "date_of_creation": 1723323600000,
+    "images": ["./assets/images/projects/aircraft.webp"],
+    "link": ""
+  },
+  {
+    "tags": ["pixel_art", "work"],
+    "date_of_creation": 1726347600000,
+    "images": ["./assets/images/projects/storm_is_coming.webp"],
+    "link": ""
+  },
+  {
+    "tags": ["pixel_art", "work"],
+    "date_of_creation": 1728680400000,
+    "images": [
+      "./assets/images/projects/into_the_storm/into_the_storm.webp",
+      "./assets/images/projects/into_the_storm/into_the_storm_progress.gif"
+    ],
+    "link": ""
+  }
+]

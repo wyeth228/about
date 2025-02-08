@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("../assets/fonts/roboto/roboto_regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("../assets/fonts/roboto/roboto_bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Fugaz One";
+  src: url("../assets/fonts/fugaz_one/fugaz_one_regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Peace Sans";
+  src: url("../assets/fonts/peace_sans/peace_sans.woff2") format("woff2");
+}

@@ -1,0 +1,247 @@
+{
+  "main": {
+    "main-header__a": {
+      "type": "innerHTML",
+      "en": "contact me",
+      "ru": "связаться"
+    },
+    "info-about__main-text": {
+      "type": "innerHTML",
+      "en": "Hello everyone and welcome!",
+      "ru": "Hello everyone and welcome!"
+    },
+    "info-about__paragraph": {
+      "type": "innerHTML",
+      "en": "about: 🖥️full stack developer, 🖌️pixel artist, and a little bit🤏 of a graphic designer",
+      "ru": "об авторе: 🖥️full stack разработчик, 🖌️pixel art художник, а также, немножко🤏 графический дизайнер"
+    },
+    "resume-title": {
+      "type": "innerHTML",
+      "en": "Resume",
+      "ru": "Резюме"
+    },
+    "portfolio-title": {
+      "type": "innerHTML",
+      "en": "Portfolio",
+      "ru": "Портфолио"
+    },
+    "links-title": {
+      "type": "innerHTML",
+      "en": "Links",
+      "ru": "Ссылки"
+    },
+    "resume-wrapper": {
+      "en": "",
+      "ru": ""
+    }
+  },
+  "months": {
+    "1": {
+      "ru": "январь",
+      "en": "january"
+    },
+    "2": {
+      "ru": "февраль",
+      "en": "february"
+    },
+    "3": {
+      "ru": "март",
+      "en": "march"
+    },
+    "4": {
+      "ru": "апрель",
+      "en": "april"
+    },
+    "5": {
+      "ru": "май",
+      "en": "may"
+    },
+    "6": {
+      "ru": "июнь",
+      "en": "june"
+    },
+    "7": {
+      "ru": "июль",
+      "en": "july"
+    },
+    "8": {
+      "ru": "август",
+      "en": "august"
+    },
+    "9": {
+      "ru": "сентябрь",
+      "en": "september"
+    },
+    "10": {
+      "ru": "октябрь",
+      "en": "october"
+    },
+    "11": {
+      "ru": "ноябрь",
+      "en": "november"
+    },
+    "12": {
+      "ru": "декабрь",
+      "en": "december"
+    }
+  },
+  "project_names": [
+    {
+      "en": "tree",
+      "ru": "tree"
+    },
+    {
+      "en": "G4560",
+      "ru": "G4560"
+    },
+    {
+      "en": "gym",
+      "ru": "спортзал"
+    },
+    {
+      "en": "ping pong room",
+      "ru": "пинг понг комната"
+    },
+    {
+      "en": "poison",
+      "ru": "poison"
+    },
+    {
+      "en": "cup",
+      "ru": "Кружка"
+    },
+    {
+      "en": "coffee shop",
+      "ru": "кофейня"
+    },
+    {
+      "ru": "ghost pay",
+      "en": "ghost pay"
+    },
+    {
+      "ru": "light pay",
+      "en": "light pay"
+    },
+    {
+      "ru": "react pizza",
+      "en": "react pizza"
+    },
+    {
+      "ru": "interview Bloggers",
+      "en": "interview Bloggers"
+    },
+    {
+      "ru": "weather knower",
+      "en": "weather knower"
+    },
+    {
+      "ru": "aircraft",
+      "en": "aircraft"
+    },
+    {
+      "ru": "storm is coming",
+      "en": "storm is coming"
+    },
+    {
+      "ru": "into the storm",
+      "en": "into the storm"
+    }
+  ],
+  "resume": [
+    {
+      "title": { "en": "Front end", "ru": "Front end" },
+      "p": [
+        {
+          "en": "- javascript (es5+), typescript",
+          "ru": "- javascript (es5+), typescript"
+        },
+        {
+          "en": "- vue / vuex / nuxt.js / composition api",
+          "ru": "- vue / vuex / nuxt.js / composition api"
+        },
+        {
+          "en": "- react / redux (little bit)",
+          "ru": "- react / redux (little bit)"
+        },
+        {
+          "en": "- pixi.js / electron.js",
+          "ru": "- pixi.js / electron.js"
+        },
+        {
+          "en": "- scss / less",
+          "ru": "- scss / less"
+        },
+        {
+          "en": "- webpack",
+          "ru": "- webpack"
+        },
+        {
+          "en": "- tailwindCSS / materializeCSS",
+          "ru": "- tailwindCSS / materializeCSS"
+        }
+      ]
+    },
+    {
+      "title": { "en": "Back end", "ru": "Back end" },
+      "p": [
+        {
+          "en": "- php / node.js",
+          "ru": "- php / node.js"
+        },
+        {
+          "en": "- mysql",
+          "ru": "- mysql"
+        },
+        {
+          "en": "- socket.io / express",
+          "ru": "- socket.io / express"
+        },
+        {
+          "en": "- http / websockets",
+          "ru": "- http / websockets"
+        },
+        {
+          "en": "- rest api / crud",
+          "ru": "- rest api / crud"
+        }
+      ]
+    },
+    {
+      "title": { "en": "Other skills", "ru": "Другие скилы" },
+      "p": [
+        {
+          "en": "- canvas",
+          "ru": "- canvas"
+        },
+        {
+          "en": "- docker (little bit)",
+          "ru": "- docker (немножко)"
+        },
+        {
+          "en": "- cross-browser compatibility / adaptive layout",
+          "ru": "- кроссбраузерность / адаптивность"
+        },
+        {
+          "en": "- unit testing (jest)",
+          "ru": "- unit testing (jest)"
+        },
+        {
+          "en": "- mvc / solid",
+          "ru": "- mvc / solid"
+        },
+        {
+          "en": "- git / github",
+          "ru": "- git / github"
+        },
+        {
+          "en": "- bem",
+          "ru": "- бэм"
+        },
+        {
+          "en": "- english B1",
+          "ru": "- английский B1"
+        }
+      ]
+    }
+  ]
+}
