@@ -1,4 +1,4 @@
-window.APP_VERSION = 0.1;
+window.APP_VERSION = "0.1.2";
 
 var main = function (renderer, localizator, eventBus) {
   localizator.init();
