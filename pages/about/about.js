@@ -15,7 +15,9 @@ define(["utils/dom"], function (utils) {
   }
 
   function renderResume(resumeWrapper, resumeTranslations, language) {
-    for (var resumePart of resumeTranslations) {
+    for (var i = 0; i < resumeTranslations.length; ++i) {
+      var resumePart = resumeTranslations[i];
+
       var resumePartElement = utils.createDivElement([
         config.RESUME_PART_CLASSNAME,
       ]);
@@ -27,7 +29,9 @@ define(["utils/dom"], function (utils) {
 
       resumePartElement.appendChild(resumePartTitleElement);
 
-      for (var resumeParagraph of resumePart.p) {
+      for (var y = 0; y < resumePart.p.length; ++y) {
+        var resumeParagraph = resumePart.p[y];
+
         var paragraphElement = utils.createParagraphElement(
           [],
           resumeParagraph[language]
@@ -53,7 +57,9 @@ define(["utils/dom"], function (utils) {
   function handleAllHashLinks() {
     var links = document.querySelectorAll('[href^="#"]');
 
-    for (var link of links) {
+    for (var i = 0; i < links.length; ++i) {
+      var link = links[i];
+
       link.addEventListener("click", function (event) {
         event.preventDefault();
 

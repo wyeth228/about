@@ -69,18 +69,6 @@ define(["utils/string", "utils/dom", "utils/requests", "utils/algo"], function (
         config.PROJECT_CLASSNAME,
       ]);
 
-      // var size = blob.size / Math.pow(1024, 2);
-
-      //   if (size < 1) {
-      //     size = blob.size / Math.pow(1024, 1);
-
-      //     size = size.toFixed(2) + " kB";
-      //   } else {
-      //     size = size.toFixed(2) + " mB";
-      //   }
-
-      //   console.log(size);
-
       (function (pElement) {
         utilsRequests.loadImage(project.images[0], function (image) {
           pElement.style.backgroundImage = "url(" + image + ")";

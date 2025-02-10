@@ -64,9 +64,16 @@ define(function () {
     },
 
     contains: function (element1, element2) {
-      if (element1.contains(element2)) {
-        return true;
+      /**
+       * checking instance for ie 9-11
+       */
+      if (element1 instanceof HTMLElement) {
+        if (element1.contains(element2)) {
+          return true;
+        }
       }
+
+      return false;
     },
 
     innerHTML: function (element, text) {

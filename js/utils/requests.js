@@ -71,7 +71,9 @@ define(["utils/extra"], function (utilsExtra) {
 
         if (src in callbackStore) {
           if (callbackStore[src].type === config.CALLBACK_TYPES.LOAD_FILE) {
-            for (var cb of callbackStore[src].callbacks) {
+            for (var i = 0; i < callbackStore[src].callbacks.length; ++i) {
+              var cb = callbackStore[src].callbacks[i];
+
               cb(callbackSendData);
             }
 
@@ -157,7 +159,9 @@ define(["utils/extra"], function (utilsExtra) {
 
         if (src in callbackStore) {
           if (callbackStore[src].type === config.CALLBACK_TYPES.LOAD_IMAGE) {
-            for (var cb of callbackStore[src].callbacks) {
+            for (var i = 0; i < callbackStore[src].callbacks.length; ++i) {
+              var cb = callbackStore[src].callbacks[i];
+
               cb(callbackSendData);
             }
 

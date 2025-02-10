@@ -1,5 +1,5 @@
 /**
- * v0.1
+ * v0.1.1
  */
 
 define(function () {
@@ -26,12 +26,12 @@ define(function () {
       var event = events[eventName];
 
       if (callback) {
-        for (var eventCallback of event) {
-          eventCallback(arguments, callback);
+        for (var i = 0; i < event.length; ++i) {
+          event[i](arguments, callback);
         }
       } else {
-        for (var eventCallback of event) {
-          eventCallback(arguments);
+        for (var i = 0; i < event.length; ++i) {
+          event[i](arguments);
         }
       }
     },

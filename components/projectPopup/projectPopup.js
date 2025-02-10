@@ -24,9 +24,6 @@ define(function () {
   }
 
   function setPopupTags(tags) {
-    /**
-     * replace
-     */
     tags = tags
       .map(function (tag) {
         return "#" + tag;

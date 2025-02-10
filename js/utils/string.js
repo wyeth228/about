@@ -26,7 +26,13 @@ define(function () {
       }
 
       var date = new Date(dateInSeconds);
-      var day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+      var day = undefined;
+
+      if (date.getDate() < 10) {
+        day = "0" + date.getDate();
+      } else {
+        day = date.getDate();
+      }
 
       return (
         months[date.getMonth() + 1][language] +
