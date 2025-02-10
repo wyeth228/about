@@ -1,11 +1,11 @@
-window.APP_VERSION = "0.1.2";
+window.APP_VERSION = "0.1.3";
 
 var main = function (renderer, localizator, eventBus) {
   localizator.init();
 
   renderer.onPageRender(localizator.localizeHandler);
 
-  renderer.init(eventBus, "app", ["/about/"]);
+  renderer.init(eventBus, "app", ["/about"]);
 
   eventBus.onEventHappens("getAppLanguage", function (callback) {
     callback(localizator.getLanguage());

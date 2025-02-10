@@ -10,10 +10,24 @@
 }
 
 .project-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 
   width: 100%;
   max-width: 1000px;
@@ -33,7 +47,11 @@
 }
 
 .project {
-  flex: 0 0 33.33%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33.33%;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
 
   cursor: pointer;
 
@@ -43,14 +61,26 @@
   margin-right: 12px;
   margin-bottom: 12px;
 
-  background-size: cover;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
   background-position: center center;
 
+  -webkit-transition: -webkit-transform ease 0.2s;
+  transition: -webkit-transform ease 0.2s;
+  -o-transition: -o-transform ease 0.2s;
+  -moz-transition: transform ease 0.2s, -moz-transform ease 0.2s;
   transition: transform ease 0.2s;
+  transition: transform ease 0.2s, -webkit-transform ease 0.2s, -moz-transform ease 0.2s, -o-transform ease 0.2s;
 }
 
 .project:hover {
-  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+     -moz-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+       -o-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 @media screen and (max-width: 992px) {
@@ -59,7 +89,11 @@
   }
 
   .project {
-    flex: 0 0 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 }
 
@@ -70,7 +104,11 @@
   }
 
   .project {
-    flex: 0 0 80%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 80%;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
 
     margin-right: 0;
 
@@ -85,6 +123,10 @@
   }
 
   .project {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 }
