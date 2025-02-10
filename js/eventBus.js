@@ -1,3 +1,7 @@
+/**
+ * v0.1
+ */
+
 define(function () {
   var events = {};
 

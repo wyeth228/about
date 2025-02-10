@@ -1,3 +1,7 @@
+/**
+ * v0.1
+ */
+
 define(["utils/requests", "utils/cycle"], function (utilsRequests, utilsCycle) {
   var config = {
     LANGUAGES: {
