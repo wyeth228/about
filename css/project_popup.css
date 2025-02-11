@@ -7,7 +7,7 @@
   left: 0;
   z-index: 10000;
 
-  background-color: #131211e7;
+  background-color: rgba(19, 18, 17, 0.906);
 
   display: -webkit-box;
   display: -webkit-flex;
