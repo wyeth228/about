@@ -192,4 +192,13 @@
   .project-popup__tags {
     font-size: 14px;
   }
+
+  .project-popup__link {
+    margin-top: 4px;
+  }
+
+  .project-popup__link svg {
+    width: 17px;
+    height: 17px;    
+  }
 }
