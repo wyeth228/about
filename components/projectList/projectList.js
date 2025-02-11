@@ -62,22 +62,22 @@ define(["utils/string", "utils/dom", "utils/requests", "utils/algo"], function (
   }
 
   function createProjectElements(projects, parentElement) {
-    for (let i = 0; i < projects.length; ++i) {
+    for (var i = 0; i < projects.length; ++i) {
       var project = projects[i];
 
       var projectElement = utilsDOM.createDivElement([
         config.PROJECT_CLASSNAME,
       ]);
 
-      (function (pElement) {
+      (function (pElement, index) {
         utilsRequests.loadImage(project.images[0], function (image) {
           pElement.style.backgroundImage = "url(" + image + ")";
         });
-      })(projectElement);
 
-      projectElement.addEventListener("click", function () {
-        onProjectElementClick(projects, i);
-      });
+        projectElement.addEventListener("click", function () {
+          onProjectElementClick(projects, index);
+        });
+      })(projectElementm, i);
 
       parentElement.appendChild(projectElement);
     }
