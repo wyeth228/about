@@ -1,5 +1,5 @@
 {
-  "main": {
+  "about": {
     "main-header__a": {
       "type": "innerHTML",
       "en": "contact me",
@@ -12,8 +12,8 @@
     },
     "info-about__paragraph": {
       "type": "innerHTML",
-      "en": "about: 🖥️full stack developer, 🖌️pixel artist, and a little bit🤏 of a graphic designer",
-      "ru": "об авторе: 🖥️full stack разработчик, 🖌️pixel art художник, а также, немножко🤏 графический дизайнер"
+      "en": "about: <img class='emoji' src='./assets/emoji/laptop.png' width='22px' height='22px'>full stack developer, <img class='emoji' src='./assets/emoji/paintbrush.png' width='22px' height='22px'>pixel artist, and a little bit<img class='emoji' src='./assets/emoji/pinching_hand.png' width='22px' height='22px'> of a graphic designer",
+      "ru": "об авторе: <img class='emoji' src='./assets/emoji/laptop.png' width='22px' height='22px'>full stack разработчик, <img class='emoji' src='./assets/emoji/paintbrush.png' width='22px' height='22px'>pixel art художник, а также, немножко<img class='emoji' src='./assets/emoji/pinching_hand.png' width='22px' height='22px'> графический дизайнер"
     },
     "resume-title": {
       "type": "innerHTML",

@@ -11,13 +11,9 @@
   height: 100%;
 
   display: -webkit-box;
-
   display: -webkit-flex;
-
   display: -moz-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -52,7 +48,7 @@
 
   margin: 20px auto;
 
-  opacity: 0.5;
+  color: #918b87;
 
   letter-spacing: 0.1rem;
 

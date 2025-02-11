@@ -55,7 +55,7 @@ define(function () {
   function activatePopup(title, tags, dateOfCreation, link) {
     removeScrollForBody();
 
-    setPopupTitle("💼 " + title);
+    setPopupTitle(title);
     setPopupTags(tags);
     setPopupDate(dateOfCreation);
     setPopupLink(link);
