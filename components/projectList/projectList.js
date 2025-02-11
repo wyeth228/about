@@ -77,7 +77,7 @@ define(["utils/string", "utils/dom", "utils/requests", "utils/algo"], function (
         projectElement.addEventListener("click", function () {
           onProjectElementClick(projects, index);
         });
-      })(projectElementm, i);
+      })(projectElement, i);
 
       parentElement.appendChild(projectElement);
     }
