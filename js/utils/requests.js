@@ -44,7 +44,7 @@ define(["utils/extra"], function (utilsExtra) {
         callbackStore[src].callbacks.push(callback);
       } else {
         callbackStore[src] = {
-          type: "loadFile",
+          type: config.CALLBACK_TYPES.LOAD_FILE,
           callbacks: [callback],
         };
       }
@@ -129,7 +129,7 @@ define(["utils/extra"], function (utilsExtra) {
         callbackStore[src].callbacks.push(callback);
       } else {
         callbackStore[src] = {
-          type: "loadImage",
+          type: config.CALLBACK_TYPES.LOAD_IMAGE,
           callbacks: [callback],
         };
       }
@@ -146,31 +146,23 @@ define(["utils/extra"], function (utilsExtra) {
         fileStore[src] = null;
       }
 
-      var xhr = new XMLHttpRequest();
-      xhr.responseType = "arraybuffer";
-      xhr.overrideMimeType("image/*");
-      xhr.open("GET", src, true);
-      xhr.onload = function () {
-        var blob = new Blob([xhr.response]);
-
-        var callbackSendData = URL.createObjectURL(blob);
-
-        fileStore[src] = callbackSendData;
+      var image = new Image();
+      image.src = src;
+      image.onload = function () {
+        fileStore[src] = src;
 
         if (src in callbackStore) {
           if (callbackStore[src].type === config.CALLBACK_TYPES.LOAD_IMAGE) {
             for (var i = 0; i < callbackStore[src].callbacks.length; ++i) {
               var cb = callbackStore[src].callbacks[i];
 
-              cb(callbackSendData);
+              cb(src);
             }
 
             delete callbackStore[src];
           }
         }
       };
-
-      xhr.send(null);
     },
 
     doRequest: function (url, settings, successCallback, errorCallback) {
